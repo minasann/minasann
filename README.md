@@ -3,60 +3,60 @@
 #include <reverse_engineering.h>
 
 /*
- * @file: README.c
- * @brief: Low-Level System Security Researcher Profile
- * @author: Mina
+ * @file: readme.c
+ * @brief: low-level system security researcher profile
+ * @author: mina
  */
 
-// Core OS Internals & Hardware Capabilities
-#define WINDOWS_INTERNALS        1
-#define NT_KERNEL                1
-#define LINUX_KERNEL             1
-#define HARDWARE_VIRTUALIZATION  1 // Intel VT-x (VMX) & AMD-V
+// core os internals & hardware capabilities
+#define windows_internals        1
+#define nt_kernel                1
+#define linux_kernel             1
+#define hardware_virtualization  1 // intel vt-x (vmx) & amd-v
 
-// Supported and Actively Used Languages
+// supported and actively used languages
 const char* supported_languages[] = {
-    "C", "C++", "Assembly (x86_64)", "Rust", "Python", "Java"
+    "c", "c++", "assembly (x86_64)", "rust", "python", "java"
 };
 
-typedef struct _RESEARCHER_PROFILE {
+typedef struct _researcher_profile {
     char*    title;
     uint32_t execution_rings;
     char**   capabilities;
-} RESEARCHER_PROFILE, *PRESEARCHER_PROFILE;
+} researcher_profile, *presearcher_profile;
 
 void main(int argc, char* argv[]) {
     
-    RESEARCHER_PROFILE self;
-    self.title = "Low-Level System Security Researcher";
+    researcher_profile self;
+    self.title = "low-level system security researcher";
     
-    // Operating at the deepest boundaries of the architecture
-    self.execution_rings = RING_0 | RING_MINUS_1 | RING_MINUS_2; 
+    // operating at the deepest boundaries of the architecture
+    self.execution_rings = ring_0 | ring_minus_1 | ring_minus_2; 
 
     self.capabilities = (char*[]) {
-        "Hardware-Assisted Virtualization (VMCS, EPT, Shadow TLB)",
-        "Kernel Driver Development (WDM/WDF, DKOM, CR3 Spoofing)",
-        "UEFI Firmware Security & Custom Bootloaders (EDK II)",
-        "Advanced Reverse Engineering (Ghidra, IDA Pro, WinDbg)",
-        "Vulnerability Research & Kernel Exploit Development",
+        "hardware-assisted virtualization (vmcs, ept, shadow tlb)",
+        "kernel driver development (wdm/wdf, dkom, cr3 spoofing)",
+        "uefi firmware security & custom bootloaders (edk ii)",
+        "advanced reverse engineering (ghidra, ida pro, windbg)",
+        "vulnerability research & kernel exploit development",
         NULL
     };
 
-    if (WINDOWS_INTERNALS && NT_KERNEL) {
-        printf("[+] Analyzing NT OS subsystems and security boundaries.\n");
-        printf("[+] Simulating state-of-the-art hypervisor deployment hooks.\n");
+    if (windows_internals && nt_kernel) {
+        printf("[+] analyzing nt os subsystems and security boundaries.\n");
+        printf("[+] simulating state-of-the-art hypervisor deployment hooks.\n");
     }
 
-    if (LINUX_KERNEL) {
-        printf("[+] Exploring VFS, memory management, and kernel modules.\n");
+    if (linux_kernel) {
+        printf("[+] exploring vfs, memory management, and kernel modules.\n");
     }
 
-    while (TRUE) {
-        // Active Research: Developing a custom UEFI-based Ring -1 Hypervisor from scratch
-        ExecuteCurrentResearch("UEFI_Kernel_Hypervisor_Project");
+    while (true) {
+        // active research: developing a custom uefi-based ring -1 hypervisor from scratch
+        executecurrentresearch("uefi_kernel_hypervisor_project");
         
-        // Vulnerability research targeting enterprise and cloud ecosystems
-        AuditKernelComponents(TARGET_VULNERABILITY_BOUNTY);
+        // vulnerability research targeting enterprise and cloud ecosystems
+        auditkernelcomponents(target_vulnerability_bounty);
     }
 }
 ```
