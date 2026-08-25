@@ -23,7 +23,7 @@ namespace mina {
     };
 
     constexpr std::array<std::string_view, 4> languages = {
-        "C", "C++", "Python", "Assembly (x86-64)"
+        "C", "C++", "Python", "Assembly (x86-64), "Rust"
     };
 
     [[nodiscard]] constexpr auto get_current_status() {
