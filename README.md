@@ -1,3 +1,4 @@
+```cpp
 #include <security_researcher.hpp>
 
 namespace mina {
@@ -35,3 +36,4 @@ int main() {
     mina::profile me;
     return 0;
 }
+```
